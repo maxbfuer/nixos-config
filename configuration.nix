@@ -52,5 +52,8 @@
   environment.variables.EDITOR = "nvim";
   environment.variables.VISUAL = "nvim";
 
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
+
   system.stateVersion = "23.11";
 }
