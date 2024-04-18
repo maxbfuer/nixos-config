@@ -48,6 +48,21 @@
   environment.systemPackages = with pkgs; [
     git
     neovim
+
+    pciutils # lspci
+    usbutils # lsusb
+    dmidecode # reads hardware information from the BIOS
+    strace # system call tracer
+    ltrace # library call tracer
+    lsof # list open files
+    lm_sensors # read hardware sensors
+
+    atop # detailed performance monitor
+    nvtop-amd # GPU monitor
+    btop # pretty process monitor
+
+    fd # modern find alternative
+    ripgrep # improved grep
   ];
   environment.variables.EDITOR = "nvim";
   environment.variables.VISUAL = "nvim";

@@ -9,8 +9,6 @@
   home.packages = with pkgs; [
     nil # nix LSP, used by vscodium
     alejandra # nix formatter, used by vscodium
-
-    pciutils
   ];
 
   programs.git = {
