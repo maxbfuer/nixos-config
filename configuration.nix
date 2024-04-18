@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  options,
   ...
 }: {
   imports = [
@@ -96,6 +97,15 @@
   };
   users.defaultUserShell = pkgs.zsh;
   programs.fzf.keybindings = true; # use fzf/zsh integration
+
+  # plocate: super-fast file finder
+  services.locate = {
+    enable = true;
+    package = pkgs.plocate;
+    localuser = null; # plocate will only run as root, setting this to null silences a warning
+    interval = "hourly";
+    prunePaths = options.services.locate.prunePaths.default ++ ["/mnt/storage"];
+  };
 
   system.stateVersion = "23.11";
 }
