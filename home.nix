@@ -9,6 +9,8 @@
   home.packages = with pkgs; [
     nil # nix LSP, used by vscodium
     alejandra # nix formatter, used by vscodium
+
+    pciutils
   ];
 
   programs.git = {
@@ -37,6 +39,17 @@
       "nix.serverPath" = "nil";
       "nix.serverSettings.nil.formatting.command" = ["alejandra"];
     };
+  };
+
+  programs.brave = {
+    enable = true;
+    extensions = [
+      {id = "nngceckbapebfimnlniiiahkandclblb";}
+    ];
+  };
+
+  home.sessionVariables = {
+    BROWSER = "brave";
   };
 
   # home manager will install and manage itself

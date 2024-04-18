@@ -42,10 +42,6 @@
     isNormalUser = true;
     description = "Max";
     extraGroups = ["networkmanager" "wheel"];
-    packages = with pkgs; [
-      firefox
-      kate
-    ];
   };
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
