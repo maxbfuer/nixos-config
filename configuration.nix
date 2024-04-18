@@ -9,8 +9,13 @@
     ./vfio.nix
   ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader = {
+    systemd-boot = {
+      enable = true;
+      consoleMode = "2"; # increase boot menu resolution
+    };
+    efi.canTouchEfiVariables = true;
+  };
 
   networking.hostName = "gaia";
   networking.networkmanager.enable = true;
