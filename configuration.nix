@@ -70,6 +70,8 @@
 
     zsh-powerlevel10k # zsh prompt
     meslo-lgs-nf # Meslo Nerd Font for powerlevel10k
+
+    freetube # YouTube client
   ];
   environment.variables.EDITOR = "nvim";
   environment.variables.VISUAL = "nvim";
