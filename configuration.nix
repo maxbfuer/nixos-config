@@ -63,12 +63,39 @@
 
     fd # modern find alternative
     ripgrep # improved grep
+    eza # modern ls alternative
+    fzf # fuzzer finder
+
+    zsh-powerlevel10k # zsh prompt
+    meslo-lgs-nf # Meslo Nerd Font for powerlevel10k
   ];
   environment.variables.EDITOR = "nvim";
   environment.variables.VISUAL = "nvim";
 
-  programs.zsh.enable = true;
+  programs.zsh = {
+    enable = true;
+    histSize = 10000000;
+    promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+    setOptions = [
+      "AUTO_CD"
+      "AUTO_PUSHD"
+    ];
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+    shellAliases = {
+      # ls/eza
+      ls = "eza";
+      lsa = "eza -a";
+      ll = "eza -l --group";
+      lla = "eza -la --group";
+      tree = "eza -T";
+      treea = "eza -Ta";
+      treel = "eza -Tl --group";
+      treela = "eza -Tla --group";
+    };
+  };
   users.defaultUserShell = pkgs.zsh;
+  programs.fzf.keybindings = true; # use fzf/zsh integration
 
   system.stateVersion = "23.11";
 }

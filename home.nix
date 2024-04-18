@@ -50,19 +50,6 @@
     BROWSER = "brave";
   };
 
-  programs.zsh = {
-    enable = true;
-    autocd = true;
-    dotDir = ".config/zsh";
-    enableAutosuggestions = true;
-    enableCompletion = true;
-  };
-
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-  };
-
   # home manager will install and manage itself
   programs.home-manager.enable = true;
 
