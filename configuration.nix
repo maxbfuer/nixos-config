@@ -65,7 +65,8 @@
     fd # modern find alternative
     ripgrep # improved grep
     eza # modern ls alternative
-    fzf # fuzzer finder
+    fzf # fuzzy finder
+    hyperfine # benchmarking tool
 
     zsh-powerlevel10k # zsh prompt
     meslo-lgs-nf # Meslo Nerd Font for powerlevel10k
