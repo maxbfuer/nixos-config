@@ -48,13 +48,14 @@
   users.users.max = {
     isNormalUser = true;
     description = "Max";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "docker"];
   };
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
   environment.systemPackages = with pkgs; [
     git
     neovim
+    docker-compose
 
     # -- system monitoring --
     btop # pretty process monitor
@@ -117,6 +118,14 @@
     localuser = null; # plocate will only run as root, setting this to null silences a warning
     interval = "hourly";
     prunePaths = options.services.locate.prunePaths.default ++ ["/mnt/storage"];
+  };
+
+  virtualisation.docker = {
+    enable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
   };
 
   environment.variables = {
