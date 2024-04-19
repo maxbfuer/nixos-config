@@ -56,6 +56,10 @@
     git
     neovim
 
+    # -- system monitoring --
+    btop # pretty process monitor
+    atop # detailed performance monitor
+    nvtop-amd # GPU monitor
     pciutils # lspci
     usbutils # lsusb
     dmidecode # reads hardware information from the BIOS
@@ -64,19 +68,20 @@
     lsof # list open files
     lm_sensors # read hardware sensors
 
-    atop # detailed performance monitor
-    nvtop-amd # GPU monitor
-    btop # pretty process monitor
-
+    # -- CLI/scripting --
     fd # modern find alternative
     ripgrep # improved grep
     eza # modern ls alternative
     fzf # fuzzy finder
     hyperfine # benchmarking tool
+    jq # JSON processor
+    bat # cat with syntax highlighting, git integration, and more
 
+    # -- shell --
     zsh-powerlevel10k # zsh prompt
     meslo-lgs-nf # Meslo Nerd Font for powerlevel10k
 
+    # -- desktop --
     freetube # YouTube client
   ];
   environment.variables.EDITOR = "nvim";
