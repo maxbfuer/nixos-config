@@ -7,6 +7,7 @@
   imports = [
     ./hardware-configuration.nix
     ./vfio.nix
+    ./nix.nix
   ];
 
   boot.loader = {
