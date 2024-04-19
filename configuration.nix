@@ -67,6 +67,7 @@
     ltrace # library call tracer
     lsof # list open files
     lm_sensors # read hardware sensors
+    extrace # monitor and print exec calls
 
     # -- CLI/scripting --
     fd # modern find alternative
