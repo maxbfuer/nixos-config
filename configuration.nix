@@ -84,9 +84,6 @@
     # -- desktop --
     freetube # YouTube client
   ];
-  environment.variables.EDITOR = "nvim";
-  environment.variables.VISUAL = "nvim";
-
   programs.zsh = {
     enable = true;
     histSize = 10000000;
@@ -119,6 +116,11 @@
     localuser = null; # plocate will only run as root, setting this to null silences a warning
     interval = "hourly";
     prunePaths = options.services.locate.prunePaths.default ++ ["/mnt/storage"];
+  };
+
+  environment.variables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
   };
 
   system.stateVersion = "23.11";
