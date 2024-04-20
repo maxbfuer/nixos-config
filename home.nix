@@ -9,6 +9,8 @@
   home.packages = with pkgs; [
     nil # nix LSP, used by vscodium
     alejandra # nix formatter, used by vscodium
+    rustup # manages the rust toolchain
+    gcc # used by rust
   ];
 
   programs.git = {
@@ -26,6 +28,7 @@
     extensions = with pkgs.vscode-extensions; [
       asvetliakov.vscode-neovim
       jnoortheen.nix-ide
+      rust-lang.rust-analyzer
     ];
     userSettings = {
       "extensions.experimental.affinity" = {
@@ -39,6 +42,7 @@
       "nix.serverSettings.nil.nix.flake.maxMemoryMB" = 4096; # give nil more memory, the default was failing
       "nix.serverSettings.nil.nix.flake.autoArchive" = true; # automatically save local copies of flake inputs
       "nix.serverSettings.nil.nix.flake.autoEvalInputs" = true; # improve completion at the cost of time/memory
+      "rust-analyzer.check.command" = "clippy";
     };
   };
 
