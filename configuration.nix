@@ -86,6 +86,7 @@
 
     # -- desktop --
     freetube # YouTube client
+    xclip # clipboard
   ];
   programs.zsh = {
     enable = true;
