@@ -43,6 +43,16 @@
       "nix.serverSettings.nil.nix.flake.autoArchive" = true; # automatically save local copies of flake inputs
       "nix.serverSettings.nil.nix.flake.autoEvalInputs" = true; # improve completion at the cost of time/memory
       "rust-analyzer.check.command" = "clippy";
+      "editor.snippetSuggestions" = "top";
+    };
+    languageSnippets = {
+      rust = {
+        test = {
+          prefix = ["test"];
+          description = "Insert a test function";
+          body = ["#[test]" "fn $1() {" "    $2" "}"];
+        };
+      };
     };
   };
 
