@@ -29,6 +29,8 @@
       asvetliakov.vscode-neovim
       jnoortheen.nix-ide
       rust-lang.rust-analyzer
+      vadimcn.vscode-lldb
+      tamasfe.even-better-toml
     ];
     userSettings = {
       "extensions.experimental.affinity" = {
