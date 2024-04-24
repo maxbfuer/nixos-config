@@ -130,6 +130,11 @@
     };
   };
 
+  services.mullvad-vpn = {
+    enable = true;
+    package = pkgs.mullvad-vpn; # include CLI and GUI
+  };
+
   environment.variables = {
     EDITOR = "nvim";
     VISUAL = "nvim";
