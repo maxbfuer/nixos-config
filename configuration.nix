@@ -87,6 +87,7 @@
     # -- desktop --
     freetube # YouTube client
     xclip # clipboard
+    qbittorrent # bittorrent client
   ];
   programs.zsh = {
     enable = true;
