@@ -70,6 +70,8 @@
     lsof # list open files
     lm_sensors # read hardware sensors
     extrace # monitor and print exec calls
+    duf # prettier `du`
+    ncdu # nice interactive disk usage analyzer
 
     # -- CLI/scripting --
     fd # modern find alternative
