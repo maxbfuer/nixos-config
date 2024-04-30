@@ -11,6 +11,8 @@
     alejandra # nix formatter, used by vscodium
     rustup # manages the rust toolchain
     gcc # used by rust
+
+    tokei # project code counter
   ];
 
   programs.git = {
@@ -26,11 +28,16 @@
     enable = true;
     package = pkgs.vscodium;
     extensions = with pkgs.vscode-extensions; [
+      # general
       asvetliakov.vscode-neovim
+      # nix
       jnoortheen.nix-ide
+      # rust
       rust-lang.rust-analyzer
       vadimcn.vscode-lldb
       tamasfe.even-better-toml
+      # docker
+      ms-azuretools.vscode-docker
     ];
     userSettings = {
       "extensions.experimental.affinity" = {
