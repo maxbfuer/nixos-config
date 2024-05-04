@@ -1,5 +1,23 @@
 {
   "nodes": {
+    "dwl-flake": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1714861974,
+        "narHash": "sha256-0/wdHqMKABSdEJAozdKOCniA/GAPclnRm8J9+MUv/E8=",
+        "owner": "maxbfuer",
+        "repo": "dwl",
+        "rev": "8e6b572c443ec00a15ea9ab7af7b97df0ba5bb08",
+        "type": "github"
+      },
+      "original": {
+        "owner": "maxbfuer",
+        "repo": "dwl",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -23,6 +41,22 @@
     },
     "nixpkgs": {
       "locked": {
+        "lastModified": 1714635257,
+        "narHash": "sha256-4cPymbty65RvF1DWQfc+Bc8B233A1BWxJnNULJKQ1EY=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "63c3a29ca82437c87573e4c6919b09a24ea61b0f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
         "lastModified": 1713145326,
         "narHash": "sha256-m7+IWM6mkWOg22EC5kRUFCycXsXLSU7hWmHdmBfmC3s=",
         "owner": "NixOS",
@@ -39,8 +73,9 @@
     },
     "root": {
       "inputs": {
+        "dwl-flake": "dwl-flake",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs_2"
       }
     }
   },
