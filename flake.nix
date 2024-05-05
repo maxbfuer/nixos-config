@@ -39,6 +39,16 @@
             environment.systemPackages = [
               dwl-flake.packages.x86_64-linux.dwl
             ];
+
+            services.greetd = {
+              enable = true;
+              settings = {
+                default_session = {
+                  command = "${dwl-flake.packages.x86_64-linux.dwl}/bin/dwl";
+                  user = "max";
+                };
+              };
+            };
           }
         ];
       };
