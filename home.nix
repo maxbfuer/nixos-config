@@ -13,6 +13,10 @@
     gcc # used by rust
 
     tokei # project code counter
+
+    foot # terminal emulator
+    bemenu # dynamic menu and launcher
+    wl-clipboard # wayland clipboard
   ];
 
   programs.git = {
