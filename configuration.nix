@@ -60,6 +60,7 @@
     git
     neovim
     docker-compose
+    moonlight-qt
 
     # -- system monitoring --
     btop # pretty process monitor
