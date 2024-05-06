@@ -14,10 +14,18 @@
 
     tokei # project code counter
 
-    foot # terminal emulator
     bemenu # dynamic menu and launcher
     wl-clipboard # wayland clipboard
   ];
+
+  programs.foot = {
+    enable = true;
+    settings = {
+      main = {
+        font = "MesloLGS NF:size=12";
+      };
+    };
+  };
 
   programs.git = {
     enable = true;

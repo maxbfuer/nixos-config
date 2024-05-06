@@ -27,14 +27,12 @@
   time.timeZone = "America/Los_Angeles";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # enable X and KDE Plasma
-  services.xserver.enable = true;
-  services.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-  services.xserver.xkb = {
-    layout = "us";
-    options = "caps:escape";
-  };
+  hardware.opengl.enable = true;
+  services.displayManager.enable = false;
+  # services.xserver.xkb = {
+  #   layout = "us";
+  #   options = "caps:escape";
+  # };
 
   # enable sound with pipewire
   sound.enable = true;
@@ -88,12 +86,14 @@
 
     # -- shell --
     zsh-powerlevel10k # zsh prompt
-    meslo-lgs-nf # Meslo Nerd Font for powerlevel10k
 
     # -- desktop --
     freetube # YouTube client
     xclip # clipboard
     qbittorrent # bittorrent client
+  ];
+  fonts.packages = with pkgs; [
+    meslo-lgs-nf # Meslo Nerd Font for powerlevel10k (zsh prompt)
   ];
   programs.zsh = {
     enable = true;
