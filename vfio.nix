@@ -9,7 +9,6 @@
       "vfio_pci"
       "vfio"
       "vfio_iommu_type1"
-      "vfio_virqfd"
     ];
 
     # capture the GPU's graphic and audio PCI devices (my ZOTAC NVIDIA 3060 Ti in this case)

@@ -2,14 +2,14 @@
   description = "A simple NixOS flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager/release-23.11";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     dwl-flake = {
       url = "github:maxbfuer/dwl";
-      inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
@@ -40,15 +40,15 @@
               dwl-flake.packages.x86_64-linux.dwl
             ];
 
-            services.greetd = {
-              enable = true;
-              settings = {
-                default_session = {
-                  command = "${dwl-flake.packages.x86_64-linux.dwl}/bin/dwl";
-                  user = "max";
-                };
-              };
-            };
+            # services.greetd = {
+            #   enable = true;
+            #   settings = {
+            #     default_session = {
+            #       command = "${dwl-flake.packages.x86_64-linux.dwl}/bin/dwl";
+            #       user = "max";
+            #     };
+            #   };
+            # };
           }
         ];
       };

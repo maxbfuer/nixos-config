@@ -29,11 +29,11 @@
 
   # enable X and KDE Plasma
   services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
+  services.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbOptions = "caps:escape";
+    options = "caps:escape";
   };
 
   # enable sound with pipewire
@@ -65,7 +65,7 @@
     # -- system monitoring --
     btop # pretty process monitor
     atop # detailed performance monitor
-    nvtop-amd # GPU monitor
+    nvtopPackages.amd # GPU monitor
     pciutils # lspci
     usbutils # lsusb
     dmidecode # reads hardware information from the BIOS
