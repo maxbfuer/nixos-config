@@ -19,7 +19,7 @@
   };
 
   networking.hostName = "gaia";
-  networking.networkmanager.enable = true;
+  networking.wireless.iwd.enable = true;
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
