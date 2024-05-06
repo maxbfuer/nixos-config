@@ -65,6 +65,9 @@
       "nix.serverSettings.nil.nix.flake.autoEvalInputs" = true; # improve completion at the cost of time/memory
       "rust-analyzer.check.command" = "clippy";
       "editor.snippetSuggestions" = "top";
+      "editor.fontFamily" = "Monaspace Neon";
+      "editor.fontSize" = 16;
+      "terminal.integrated.fontFamily" = "MesloLGS NF";
     };
     languageSnippets = {
       rust = {

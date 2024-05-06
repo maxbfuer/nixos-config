@@ -94,6 +94,7 @@
   ];
   fonts.packages = with pkgs; [
     meslo-lgs-nf # Meslo Nerd Font for powerlevel10k (zsh prompt)
+    monaspace
   ];
   programs.zsh = {
     enable = true;
