@@ -96,7 +96,7 @@
     packages = with pkgs; [
       meslo-lgs-nf # terminal font; recommended for p10k (zsh prompt)
       monaspace # code font
-      ubuntu_font_family # GUI font
+      ubuntu_font_family # dwl font
       # Noto for language and emoji coverage
       noto-fonts
       noto-fonts-cjk
@@ -107,9 +107,9 @@
     fontconfig = {
       subpixel.rgba = "rgb";
       defaultFonts = {
-        monospace = ["Ubuntu Mono" "Noto Sans Mono" "Monaspace Neon"];
+        monospace = ["Noto Sans Mono"];
         serif = ["Noto Serif"];
-        sansSerif = ["Ubuntu" "Noto Sans"];
+        sansSerif = ["Noto Sans"];
         emoji = ["Noto Color Emoji" "Noto Emoji"];
       };
     };
