@@ -92,10 +92,28 @@
     xclip # clipboard
     qbittorrent # bittorrent client
   ];
-  fonts.packages = with pkgs; [
-    meslo-lgs-nf # Meslo Nerd Font for powerlevel10k (zsh prompt)
-    monaspace
-  ];
+  fonts = {
+    packages = with pkgs; [
+      meslo-lgs-nf # terminal font; recommended for p10k (zsh prompt)
+      monaspace # code font
+      ubuntu_font_family # GUI font
+      # Noto for language and emoji coverage
+      noto-fonts
+      noto-fonts-cjk
+      noto-fonts-color-emoji
+      noto-fonts-monochrome-emoji
+    ];
+
+    fontconfig = {
+      subpixel.rgba = "rgb";
+      defaultFonts = {
+        monospace = ["Ubuntu Mono" "Noto Sans Mono" "Monaspace Neon"];
+        serif = ["Noto Serif"];
+        sansSerif = ["Ubuntu" "Noto Sans"];
+        emoji = ["Noto Color Emoji" "Noto Emoji"];
+      };
+    };
+  };
   programs.zsh = {
     enable = true;
     histSize = 10000000;
