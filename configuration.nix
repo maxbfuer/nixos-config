@@ -83,6 +83,7 @@
     hyperfine # benchmarking tool
     jq # JSON processor
     bat # cat with syntax highlighting, git integration, and more
+    viddy # modern watch replacement
 
     # -- shell --
     zsh-powerlevel10k # zsh prompt
