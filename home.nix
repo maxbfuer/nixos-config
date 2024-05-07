@@ -15,7 +15,8 @@
     tokei # project code counter
 
     bemenu # dynamic menu and launcher
-    wl-clipboard # wayland clipboard
+    wl-clipboard # clipboard
+    gammastep # adjust color temperature
   ];
 
   programs.foot = {
