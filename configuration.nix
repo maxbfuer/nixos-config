@@ -166,5 +166,8 @@
     VISUAL = "nvim";
   };
 
+  boot.tmp.useTmpfs = true;
+  boot.tmp.tmpfsSize = "75%";
+
   system.stateVersion = "23.11";
 }
