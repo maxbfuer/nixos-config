@@ -61,7 +61,7 @@
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "nil";
       "nix.serverSettings.nil.formatting.command" = ["alejandra"];
-      "nix.serverSettings.nil.nix.flake.maxMemoryMB" = 4096; # give nil more memory, the default was failing
+      "nix.serverSettings.nil.nix.flake.maxMemoryMB" = 8192; # give nil more memory, the default was failing
       "nix.serverSettings.nil.nix.flake.autoArchive" = true; # automatically save local copies of flake inputs
       "nix.serverSettings.nil.nix.flake.autoEvalInputs" = true; # improve completion at the cost of time/memory
       "rust-analyzer.check.command" = "clippy";
