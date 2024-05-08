@@ -2,14 +2,9 @@
   config,
   pkgs,
   options,
+  inputs,
   ...
 }: {
-  imports = [
-    ./hardware-configuration.nix
-    ./vfio.nix
-    ./nix.nix
-  ];
-
   boot.loader = {
     systemd-boot = {
       enable = true;
@@ -59,6 +54,7 @@
     neovim
     docker-compose
     moonlight-qt
+    inputs.dwl-flake.packages.x86_64-linux.dwl
 
     # -- system monitoring --
     btop # pretty process monitor

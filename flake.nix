@@ -1,12 +1,14 @@
 {
-  description = "A simple NixOS flake";
+  description = "My NixOS config";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
     home-manager = {
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     dwl-flake = {
       url = "github:maxbfuer/dwl";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -19,28 +21,31 @@
     home-manager,
     dwl-flake,
     ...
-  } @ inputs: {
-    nixosConfigurations.gaia = let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-      };
-    in
-      nixpkgs.lib.nixosSystem {
+  } @ inputs: let
+    inherit (self) outputs;
+    system = "x86_64-linux";
+  in {
+    formatter = nixpkgs.legacyPackages.${system}.alejandra;
+
+    nixosConfigurations = {
+      gaia = nixpkgs.lib.nixosSystem {
+        # pass inputs as args to all submodules
+        specialArgs = {inherit inputs;};
         modules = [
-          ./configuration.nix
+          # system-wide config
+          ./system
+
+          # home config
           home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.max = import ./home.nix;
-          }
-          {
-            environment.systemPackages = [
-              dwl-flake.packages.x86_64-linux.dwl
-            ];
+            home-manager = {
+              useUserPackages = true;
+              useGlobalPkgs = true;
+              users.max = import ./home;
+            };
           }
         ];
       };
+    };
   };
 }
