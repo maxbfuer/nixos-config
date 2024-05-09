@@ -16,9 +16,6 @@
   networking.hostName = "gaia";
   networking.wireless.iwd.enable = true;
 
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
-
   time.timeZone = "America/Los_Angeles";
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -28,18 +25,6 @@
   #   layout = "us";
   #   options = "caps:escape";
   # };
-
-  # enable sound with pipewire
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-  };
 
   # define the user account
   users.users.max = {

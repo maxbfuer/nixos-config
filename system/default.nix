@@ -4,5 +4,6 @@
     ./hardware-configuration.nix
     ./nix.nix
     ./vfio.nix
+    ./audio.nix
   ];
 }

@@ -22,9 +22,9 @@
     dwl-flake,
     ...
   } @ inputs: let
-    inherit (self) outputs;
     system = "x86_64-linux";
   in {
+    # define the formatter used by `nix fmt`
     formatter = nixpkgs.legacyPackages.${system}.alejandra;
 
     nixosConfigurations = {
