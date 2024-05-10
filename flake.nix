@@ -39,6 +39,7 @@
           home-manager.nixosModules.home-manager
           {
             home-manager = {
+              extraSpecialArgs = {inherit inputs;};
               useUserPackages = true;
               useGlobalPkgs = true;
               users.max = import ./home;
