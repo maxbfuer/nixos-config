@@ -78,7 +78,6 @@
     packages = with pkgs; [
       meslo-lgs-nf # terminal font; recommended for p10k (zsh prompt)
       monaspace # code font
-      ubuntu_font_family # dwl font
       # Noto for language and emoji coverage
       noto-fonts
       noto-fonts-cjk
