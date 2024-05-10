@@ -1,0 +1,18 @@
+* {
+    font-family: Ubuntu Nerd Font;
+    font-size: 18px;
+    border: 0;
+    padding: 1px 1px 1px 1px;
+}
+
+#tags button.occupied {
+    background: #FF0000
+}
+
+#tags button.focused {
+    background: #00FF00
+}
+
+#tags button.urgent {
+    background: #0000FF
+}

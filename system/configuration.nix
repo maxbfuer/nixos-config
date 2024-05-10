@@ -84,7 +84,7 @@
       noto-fonts-color-emoji
       noto-fonts-monochrome-emoji
 
-      (nerdfonts.override {fonts = ["Monaspace"];})
+      (nerdfonts.override {fonts = ["Monaspace" "Ubuntu"];})
     ];
 
     fontconfig = {
