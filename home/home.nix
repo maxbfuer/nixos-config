@@ -17,6 +17,8 @@
     bemenu # dynamic menu and launcher
     wl-clipboard # clipboard
     gammastep # adjust color temperature
+    blueman # bluetooth device manager GUI
+    pavucontrol # audio control GUI
   ];
 
   programs.foot = {
