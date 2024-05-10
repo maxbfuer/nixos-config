@@ -83,10 +83,13 @@
       noto-fonts-cjk
       noto-fonts-color-emoji
       noto-fonts-monochrome-emoji
+
+      (nerdfonts.override {fonts = ["Monaspace"];})
     ];
 
     fontconfig = {
       subpixel.rgba = "rgb";
+      # TODO: is this necessary? should I have nerd fonts in here?
       defaultFonts = {
         monospace = ["Noto Sans Mono"];
         serif = ["Noto Serif"];
