@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }: {
   home.username = "max";
@@ -19,7 +20,14 @@
     gammastep # adjust color temperature
     blueman # bluetooth device manager GUI
     pavucontrol # audio control GUI
+    fuzzel # .desktop launcher
+    libnotify # provides notify-send
   ];
+
+  # notification daemon
+  services.fnott = {
+    enable = true;
+  };
 
   programs.foot = {
     enable = true;
