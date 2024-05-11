@@ -8,7 +8,7 @@
         positon = "top";
         modules-left = ["dwl/tags" "dwl/window"];
         modules-center = ["clock"];
-        modules-right = ["network" "memory" "cpu" "temperature" "disk" "tray" "clock"];
+        modules-right = ["network" "memory" "cpu" "temperature" "disk" "tray"];
 
         "network" = {
           interface = "wlan0";
@@ -28,7 +28,7 @@
         };
 
         "temperature" = {
-          format = "{temperatureC}°C";
+          format = "{temperatureC}°C";
           hwmon-path = "/sys/class/hwmon/hwmon1/temp1_input"; # Tctl
           interval = 2;
         };
