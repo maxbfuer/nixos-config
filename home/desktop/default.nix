@@ -1,6 +1,6 @@
 {...}: {
   imports = [
     ./notifications.nix
-    ./waybar.nix
+    ./waybar
   ];
 }
