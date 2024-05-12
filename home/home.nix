@@ -21,6 +21,7 @@
     blueman # bluetooth device manager GUI
     pavucontrol # audio control GUI
     fuzzel # .desktop launcher
+    obsidian # markdown knowledge base
   ];
 
   programs.foot = {
