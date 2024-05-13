@@ -42,7 +42,7 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
   environment.systemPackages = with pkgs; [
-    git
+    git # required for nix flakes
     neovim
     docker-compose
     moonlight-qt
