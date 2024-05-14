@@ -25,7 +25,7 @@
     system = "x86_64-linux";
   in {
     # define the formatter used by `nix fmt`
-    formatter = nixpkgs.legacyPackages.${system}.alejandra;
+    formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;
 
     nixosConfigurations = {
       gaia = nixpkgs.lib.nixosSystem {
