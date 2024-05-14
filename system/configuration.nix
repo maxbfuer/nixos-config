@@ -34,12 +34,6 @@
     extraGroups = ["networkmanager" "wheel" "docker"];
   };
 
-  # allow unfree for specific packages
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "obsidian"
-    ];
-
   nix.settings.experimental-features = ["nix-command" "flakes"];
   environment.systemPackages = with pkgs; [
     git # required for nix flakes

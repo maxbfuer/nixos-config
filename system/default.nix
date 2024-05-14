@@ -5,5 +5,6 @@
     ./nix.nix
     ./vfio.nix
     ./audio.nix
+    ./unfree.nix
   ];
 }
