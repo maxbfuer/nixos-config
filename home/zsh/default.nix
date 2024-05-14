@@ -6,11 +6,13 @@
   programs.zsh = {
     enable = true;
 
-    history.size = 10000000;
-    enableCompletion = true;
-
     dotDir = ".config/zsh";
+    history.size = 10000000;
+    initExtra = ''
+      setopt AUTO_CD AUTO_PUSHD
+    '';
 
+    enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
     plugins = [
@@ -26,15 +28,6 @@
       }
     ];
 
-    # autostart dwl when logging in on tty1
-    profileExtra = ''
-      [ "''${TTY}" = '/dev/tty1' ] && exec dbus-run-session dwl -s waybar
-    '';
-
-    initExtra = ''
-      setopt AUTO_CD AUTO_PUSHD
-    '';
-
     shellAliases = {
       # ls/eza
       ls = "eza";
@@ -46,5 +39,19 @@
       treel = "eza -Tl --group";
       treela = "eza -Tla --group";
     };
+
+    zsh-abbr = {
+      enable = true;
+      abbreviations = {
+        g = "git";
+        nors = "sudo nixos-rebuild switch --option eval-cache false --flake \"path:$(realpath /etc/nixos)#gaia\"";
+        nfu = "nix flake update";
+      };
+    };
+
+    # autostart dwl when logging in on tty1
+    profileExtra = ''
+      [ "''${TTY}" = '/dev/tty1' ] && exec dbus-run-session dwl -s waybar
+    '';
   };
 }
