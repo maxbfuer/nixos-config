@@ -15,13 +15,15 @@
 
     tokei # project code counter
 
-    bemenu # dynamic menu and launcher
     wl-clipboard # clipboard
     gammastep # adjust color temperature
     blueman # bluetooth device manager GUI
     pavucontrol # audio control GUI
-    fuzzel # .desktop launcher
     obsidian # markdown knowledge base
+
+    # -- dwl bindings --
+    kickoff # fast and responsive dmenu replacement
+    fuzzel # .desktop entry launcher
   ];
 
   programs.foot = {
