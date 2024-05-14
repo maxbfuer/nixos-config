@@ -7,4 +7,8 @@
       };
     };
   };
+
+  home.sessionVariables = {
+    TERMINAL = "foot";
+  };
 }
