@@ -3,5 +3,6 @@
     ./notifications.nix
     ./waybar
     ./foot.nix
+    ./tofi.nix
   ];
 }
