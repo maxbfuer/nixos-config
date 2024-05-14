@@ -6,13 +6,20 @@
     userEmail = "max@maxfuerstenberg.com";
 
     aliases = {
-      st = "status -sb";
-      last = "log -1 HEAD --stat";
+      a = "add";
       cm = "commit -m";
+
+      st = "status -sb";
       d = "diff";
       dc = "diff --cached";
-      l = "log --pretty=format:\"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate --date=short --graph";
-      a = "add";
+
+      ls = "log --pretty=format:\"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\" --decorate --date=short";
+      ll = "log --pretty=format:\"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate --date=short --stat";
+      graph = "log --oneline --graph --decorate";
+      last = "log -1 HEAD --stat";
+
+      c = "clone";
+      sc = "clone --depth=1";
     };
 
     extraConfig = {
