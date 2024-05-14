@@ -17,17 +17,6 @@
     obsidian # markdown knowledge base
   ];
 
-  programs.brave = {
-    enable = true;
-    extensions = [
-      {id = "nngceckbapebfimnlniiiahkandclblb";}
-    ];
-  };
-
-  home.sessionVariables = {
-    BROWSER = "brave";
-  };
-
   # home manager will install and manage itself
   programs.home-manager.enable = true;
 
