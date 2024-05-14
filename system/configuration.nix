@@ -58,6 +58,7 @@
     ncdu # nice interactive disk usage analyzer
 
     # -- CLI/scripting --
+    dash # very fast narrowly POSIX-compliant shell
     fd # modern find alternative
     ripgrep # improved grep
     eza # modern ls alternative
