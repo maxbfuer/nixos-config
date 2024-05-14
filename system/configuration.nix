@@ -73,9 +73,6 @@
     bat # cat with syntax highlighting, git integration, and more
     viddy # modern watch replacement
 
-    # -- shell --
-    zsh-powerlevel10k # zsh prompt
-
     # -- desktop --
     freetube # YouTube client
     xclip # clipboard
@@ -105,28 +102,9 @@
       };
     };
   };
-  programs.zsh = {
-    enable = true;
-    histSize = 10000000;
-    promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-    setOptions = [
-      "AUTO_CD"
-      "AUTO_PUSHD"
-    ];
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-    shellAliases = {
-      # ls/eza
-      ls = "eza";
-      lsa = "eza -a";
-      ll = "eza -l --group";
-      lla = "eza -la --group";
-      tree = "eza -T";
-      treea = "eza -Ta";
-      treel = "eza -Tl --group";
-      treela = "eza -Tla --group";
-    };
-  };
+
+  # home-manager needs these to configure zsh
+  programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
   programs.fzf.keybindings = true; # use fzf/zsh integration
 

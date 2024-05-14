@@ -1,7 +1,8 @@
 {
   imports = [
-    ./home.nix
     ./desktop
+    ./home.nix
     ./git.nix
+    ./zsh
   ];
 }
