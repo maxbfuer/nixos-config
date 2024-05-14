@@ -4,5 +4,6 @@
     ./waybar
     ./foot.nix
     ./tofi.nix
+    ./vscodium.nix
   ];
 }
