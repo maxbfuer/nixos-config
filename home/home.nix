@@ -26,15 +26,6 @@
     fuzzel # .desktop entry launcher
   ];
 
-  programs.foot = {
-    enable = true;
-    settings = {
-      main = {
-        font = "MesloLGS NF:size=12";
-      };
-    };
-  };
-
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
