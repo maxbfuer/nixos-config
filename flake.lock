@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1715714359,
-        "narHash": "sha256-p4imA9kX0jU0AxxhX7N8xl/bQPd/nl+FYESTm3Hm7gU=",
+        "lastModified": 1715723236,
+        "narHash": "sha256-Hs+xM2fhvZQ5uO5zRv8ruhrg/LpNjFC3C2UI7VVstMs=",
         "owner": "maxbfuer",
         "repo": "dwl",
-        "rev": "acf2155a341b6585a17f84c5da951a0ebb25a09f",
+        "rev": "156b14404af6d9e93982c19fb9167120404178ca",
         "type": "github"
       },
       "original": {
