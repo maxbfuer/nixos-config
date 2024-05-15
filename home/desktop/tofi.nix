@@ -1,11 +1,13 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  nerd-monaspace = pkgs.nerdfonts.override {fonts = ["Monaspace"];};
+in {
   # dwl binding: very fast, simple dmenu/rofi for wlroots
   programs.tofi = {
     enable = true;
     settings = {
       # specifying the font file improves startup time
       # see: https://github.com/philj56/tofi?tab=readme-ov-file#performance
-      font = "${pkgs.monaspace}/share/fonts/opentype/MonaspaceNeon-Regular.otf";
+      font = "${nerd-monaspace}/share/fonts/opentype/NerdFonts/MonaspiceNeNerdFont-Regular.otf";
       fuzzy-match = true;
       prompt-text = "\"> \"";
       # "fullscreen" theme
