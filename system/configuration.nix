@@ -37,7 +37,6 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
   environment.systemPackages = with pkgs; [
     git # required for nix flakes
-    neovim
     docker-compose
     moonlight-qt
     inputs.dwl-flake.packages.x86_64-linux.dwl
@@ -123,11 +122,6 @@
   services.mullvad-vpn = {
     enable = true;
     package = pkgs.mullvad-vpn; # include CLI and GUI
-  };
-
-  environment.variables = {
-    EDITOR = "nvim";
-    VISUAL = "nvim";
   };
 
   boot.tmp.useTmpfs = true;

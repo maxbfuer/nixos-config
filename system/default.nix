@@ -6,5 +6,6 @@
     ./vfio.nix
     ./audio.nix
     ./unfree.nix
+    ./nvim.nix
   ];
 }
