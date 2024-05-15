@@ -2,6 +2,9 @@
   home.packages = with pkgs; [
     nil # nix LSP
     alejandra # nix formatter
+    shellcheck # shell script linter
+    shfmt
+
     rustup # manages the rust toolchain
     gcc # used by rust
   ];
@@ -21,6 +24,9 @@
       tamasfe.even-better-toml
       # docker
       ms-azuretools.vscode-docker
+      # shell
+      timonwong.shellcheck
+      foxundermoon.shell-format
     ];
 
     userSettings = {
