@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    stable-nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
 
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -18,6 +19,7 @@
   outputs = {
     self,
     nixpkgs,
+    stable-nixpkgs,
     home-manager,
     dwl-flake,
     ...
