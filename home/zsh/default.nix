@@ -44,7 +44,7 @@
       enable = true;
       abbreviations = {
         g = "git";
-        nors = "sudo nixos-rebuild switch --option eval-cache false --flake \"path:$(realpath /etc/nixos)#gaia\"";
+        nors = "doas nixos-rebuild switch --option eval-cache false --flake \"path:$(realpath /etc/nixos)#gaia\"";
         nfu = "nix flake update";
       };
     };

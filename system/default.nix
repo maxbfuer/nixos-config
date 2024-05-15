@@ -7,5 +7,6 @@
     ./audio.nix
     ./unfree.nix
     ./nvim.nix
+    ./doas.nix
   ];
 }
