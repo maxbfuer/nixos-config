@@ -4,5 +4,6 @@
     ./home.nix
     ./git.nix
     ./zsh
+    ./scripts
   ];
 }

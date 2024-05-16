@@ -1,0 +1,19 @@
+#!/usr/bin/env dash
+
+# dirs to search for git repos, separated by spaces
+search_dirs="$HOME/repos"
+
+selected_repo="$(
+    # I want word splitting on $search_dirs, the warning can be ignored
+    # shellcheck disable=SC2086
+    # find repositories by getting the parent dir of .git dirs,
+    fd -HItd '^\.git$' $search_dirs -x dirname |
+        # then use tofi to make a selection
+        tofi --prompt-text=' '
+)"
+# TODO: use ripgrep to extract the repository dir and its parent like this:
+#   rg '([^/]+/[^/]+)/\.git' -or'$1' |
+# but then how do I open the repo now that the path has been stripped?
+
+# open the repo in vscodium if a selection was made in tofi
+[ -z "$selected_repo" ] || codium -n "$selected_repo"

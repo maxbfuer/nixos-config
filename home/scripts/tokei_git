@@ -1,0 +1,18 @@
+#!/usr/bin/env dash
+
+cleanup() {
+	rm -rf "$temp_dir"
+}
+trap cleanup EXIT HUP INT QUIT TERM
+
+if [ "$#" -ne 1 ]; then
+	echo "Usage: $(basename "$0") <git-url>" >&2
+	exit 1
+fi
+url="$1"
+
+temp_dir=$(mktemp -d)
+cd "$temp_dir" || exit
+
+git clone --quiet --depth=1 "$url"
+tokei
