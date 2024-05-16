@@ -38,12 +38,18 @@
       treea = "eza -Ta";
       treel = "eza -Tl --group";
       treela = "eza -Tla --group";
+
+      cdtemp = ''cd $(mktemp -d)'';
     };
 
     zsh-abbr = {
       enable = true;
       abbreviations = {
+        d = "doas";
+        v = "nvim";
+        vr = "nvim -RM";
         g = "git";
+        c = "cargo";
         nors = "doas nixos-rebuild switch --option eval-cache false --flake \"path:$(realpath /etc/nixos)#gaia\"";
         nfu = "nix flake update";
       };
