@@ -4,4 +4,8 @@ target_vm='win11'
 
 notify-send "Shutting down ${target_vm}."
 pkill looking-glass
+
+# the VM needs to be awake to receive the graceful shutdown signal
+virsh -c 'qemu:///system' resume "${target_vm}"
+sleep 1
 virsh -c 'qemu:///system' shutdown "${target_vm}"
