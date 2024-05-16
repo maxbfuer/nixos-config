@@ -62,6 +62,11 @@
         };
       };
       shellscript = {
+        dash = {
+          prefix = ["dash"];
+          description = "Insert a dash shebang";
+          body = ["#!/usr/bin/env dash\n\n"];
+        };
         param_1 = {
           prefix = ["param_1"];
           description = "Take one parameter, erroring if it is not given";
