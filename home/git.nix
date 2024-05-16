@@ -8,6 +8,7 @@
     aliases = {
       a = "add";
       cm = "commit -m";
+      ca = "commit --amend";
 
       st = "status -sb";
       d = "diff";
