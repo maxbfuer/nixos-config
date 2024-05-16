@@ -1,0 +1,7 @@
+#!/usr/bin/env dash
+
+target_vm='win11'
+
+notify-send "Shutting down ${target_vm}."
+pkill looking-glass
+virsh -c 'qemu:///system' shutdown "${target_vm}"
