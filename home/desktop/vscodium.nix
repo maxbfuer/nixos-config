@@ -53,7 +53,25 @@
         test = {
           prefix = ["test"];
           description = "Insert a test function";
-          body = ["#[test]" "fn $1() {" "    $2" "}"];
+          body = [
+            "#[test]"
+            "fn $1() {"
+            "\t$2"
+            "}"
+          ];
+        };
+      };
+      shellscript = {
+        param_1 = {
+          prefix = ["param_1"];
+          description = "Take one parameter, erroring if it is not given";
+          body = [
+            ''if [ "$#" -ne 1 ]; then''
+            ("\t" + ''echo "Usage: $(basename "\$0") <$1>" >&2'')
+            ("\t" + ''exit 1'')
+            ''fi''
+            ''$1="\$1"''
+          ];
         };
       };
     };
