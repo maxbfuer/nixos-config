@@ -127,5 +127,7 @@
   boot.tmp.useTmpfs = true;
   boot.tmp.tmpfsSize = "75%";
 
+  services.fstrim.enable = true;
+
   system.stateVersion = "23.11";
 }
