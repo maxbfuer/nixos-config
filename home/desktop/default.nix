@@ -5,6 +5,6 @@
     ./foot.nix
     ./tofi.nix
     ./vscodium.nix
-    ./brave.nix
+    ./ungoogled-chromium.nix
   ];
 }
