@@ -45,13 +45,32 @@
     zsh-abbr = {
       enable = true;
       abbreviations = {
+        # general
         d = "doas";
         v = "nvim";
         vr = "nvim -RM";
         g = "git";
         c = "cargo";
+
+        # nix
         nors = "doas nixos-rebuild switch --option eval-cache false --flake \"path:$(realpath /etc/nixos)#gaia\"";
         nfu = "nix flake update";
+
+        # docker
+        dlo = "docker logs";
+        dps = "docker ps";
+        dim = "docker images";
+        dprune = "docker system prune -af --volumes";
+
+        dc = "docker-compose";
+        dcu = "docker-compose up -d";
+        dcd = "docker-compose down";
+        dcre = "docker-compose restart";
+        dcpu = "docker-compose pull";
+        dcex = "docker-compose exec";
+        dclo = "docker-compose logs";
+        dcps = "docker-compose ps";
+        dcco = "docker-compose config";
       };
     };
 
