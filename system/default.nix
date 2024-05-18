@@ -8,5 +8,6 @@
     ./unfree.nix
     ./nvim.nix
     ./doas.nix
+    ./docker.nix
   ];
 }

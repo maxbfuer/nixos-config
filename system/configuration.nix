@@ -31,13 +31,12 @@
   users.users.max = {
     isNormalUser = true;
     description = "Max";
-    extraGroups = ["networkmanager" "wheel" "docker"];
+    extraGroups = ["networkmanager" "wheel"];
   };
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
   environment.systemPackages = with pkgs; [
     git # required for nix flakes
-    docker-compose
     moonlight-qt
     inputs.dwl-flake.packages.x86_64-linux.dwl
 
@@ -109,14 +108,6 @@
     localuser = null; # plocate will only run as root, setting this to null silences a warning
     interval = "hourly";
     prunePaths = options.services.locate.prunePaths.default ++ ["/mnt/storage"];
-  };
-
-  virtualisation.docker = {
-    enable = true;
-    rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
   };
 
   services.mullvad-vpn = {
