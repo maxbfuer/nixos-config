@@ -76,7 +76,7 @@
 
     # autostart dwl when logging in on tty1
     profileExtra = ''
-      [ "''${TTY}" = '/dev/tty1' ] && exec dbus-run-session dwl -s waybar
+      [ "''${TTY}" = '/dev/tty1' ] && exec dbus-run-session dwl
     '';
   };
 }
