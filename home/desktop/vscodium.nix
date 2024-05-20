@@ -78,6 +78,13 @@
             ''$1="\$1"''
           ];
         };
+        err = {
+          prefix = ["err"];
+          description = "Echo into stderr";
+          body = [
+            ''echo $1 >&2''
+          ];
+        };
       };
     };
   };
