@@ -5,11 +5,26 @@ cleanup() {
 }
 trap cleanup EXIT HUP INT QUIT TERM
 
-if [ "$#" -ne 1 ]; then
+invalid_usage() {
 	echo "Usage: $(basename "$0") <git_url>" >&2
 	exit 1
+}
+
+if [ "$#" -eq 0 ]; then
+	git_url="$(wl-paste)"
+	echo "Using clipboard: '$git_url'"
+elif [ "$#" -eq 1 ]; then
+	git_url="$1"
+else
+	invalid_usage
 fi
-git_url="$1"
+
+# quit if it's not a valid url
+echo "$git_url" |
+	rg -q '[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)' || {
+	echo 'Malformed URL' >&2
+	invalid_usage
+}
 
 temp_dir=$(mktemp -d)
 cd "$temp_dir" || exit
