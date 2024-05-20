@@ -1,13 +1,6 @@
-{
-  imports = [
-    ./configuration.nix
-    ./hardware-configuration.nix
-    ./nix.nix
-    ./vfio.nix
-    ./audio.nix
-    ./unfree.nix
-    ./nvim.nix
-    ./doas.nix
-    ./docker.nix
-  ];
+{lib, ...}: let
+  my-lib = import ../lib/my-lib.nix {inherit lib;};
+  imports = my-lib.importsFromDir ./.;
+in {
+  inherit imports;
 }
