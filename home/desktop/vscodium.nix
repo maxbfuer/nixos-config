@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    nil # nix LSP
+    nixd # nix LSP
     alejandra # nix formatter
     shellcheck # shell script linter
     shfmt
@@ -36,11 +36,23 @@
       "keyboard.dispatch" = "keyCode"; # makes caps/escape remap work with vscode-neovim
       "editor.formatOnSave" = true;
       "nix.enableLanguageServer" = true;
-      "nix.serverPath" = "nil";
-      "nix.serverSettings.nil.formatting.command" = ["alejandra"];
-      "nix.serverSettings.nil.nix.maxMemoryMB" = 8192; # give nil more memory, the default was failing
-      "nix.serverSettings.nil.nix.flake.autoArchive" = true; # automatically save local copies of flake inputs
-      "nix.serverSettings.nil.nix.flake.autoEvalInputs" = true; # improve completion at the cost of time/memory
+      "nix.serverPath" = "nixd";
+      # "nix.serverSettings.nixd.formatting.command" = ["alejandra"];
+      "nix.serverSettings" = {
+        "nixd" = {
+          "formatting" = {
+            "command" = ["alejandra"];
+          };
+          "options" = {
+            "nixos" = {
+              "expr" = "(builtins.getFlake ./.).nixosConfigurations.gaia.options";
+            };
+            "home-manager" = {
+              "expr" = "(builtins.getFlake \"github:msfjarvis/dotfiles\").homeConfigurations.\"msfjarvis@ryzenbox\".options";
+            };
+          };
+        };
+      };
       "rust-analyzer.check.command" = "clippy";
       "editor.snippetSuggestions" = "top";
       "editor.fontFamily" = "MonaspiceNe Nerd Font";
