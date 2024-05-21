@@ -63,7 +63,6 @@
     fzf # fuzzy finder
     hyperfine # benchmarking tool
     jq # JSON processor
-    bat # cat with syntax highlighting, git integration, and more
     viddy # modern watch replacement
 
     # -- desktop --
