@@ -36,6 +36,7 @@
         ".config/borg"
         ".config/qBittorrent"
         ".config/VSCodium"
+        ".config/PrusaSlicer"
         {
           directory = ".ssh";
           mode = "0700";

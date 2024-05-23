@@ -15,7 +15,6 @@
     blueman # bluetooth device manager GUI
     pavucontrol # audio control GUI
     obsidian # markdown knowledge base
-    freecad # parametric CAD software
   ];
 
   # home manager will install and manage itself
