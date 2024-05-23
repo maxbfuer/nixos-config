@@ -14,6 +14,8 @@
       url = "github:maxbfuer/dwl";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    impermanence.url = "github:nix-community/impermanence";
   };
 
   outputs = {
@@ -22,6 +24,7 @@
     stable-nixpkgs,
     home-manager,
     dwl-flake,
+    impermanence,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -47,6 +50,7 @@
               users.max = import ./home;
             };
           }
+          impermanence.nixosModules.impermanence
         ];
       };
     };

@@ -53,7 +53,7 @@
         c = "cargo";
 
         # nix
-        nors = "doas nixos-rebuild switch --option eval-cache false --flake \"path:$(realpath /etc/nixos)#gaia\"";
+        nors = "doas nixos-rebuild switch --option eval-cache false --flake \"path:/home/max/repos/nixos-config#gaia\"";
         nfu = "nix flake update";
 
         # docker
