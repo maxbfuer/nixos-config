@@ -14,6 +14,9 @@
     efi.canTouchEfiVariables = true;
   };
 
+  users.mutableUsers = false;
+  users.users.root.initialPassword = "$y$j9T$quE96HPGIEjVX/9inly2L/$zo4v0sHkuqN.YvP7ERrM28AUvAm6BzQ.MGMHUATTC2B";
+
   networking.hostName = "gaia";
   networking.wireless.iwd.enable = true;
 
@@ -30,6 +33,7 @@
   # define the user account
   users.users.max = {
     isNormalUser = true;
+    initialHashedPassword = "$y$j9T$epaQgPhOyuk95n9x2kJ0m/$8/K9H67v7kyIPI0qW88XKsFUB5nhfOyUN1Snm4VrrsD";
     description = "Max";
     extraGroups = ["networkmanager" "wheel"];
   };
