@@ -11,7 +11,7 @@
     };
 
     dwl-flake = {
-      url = "github:maxbfuer/dwl";
+      url = "path:/home/max/repos/dwl";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
