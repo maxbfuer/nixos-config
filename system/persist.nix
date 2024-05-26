@@ -37,6 +37,7 @@
         ".config/qBittorrent"
         ".config/VSCodium"
         ".config/PrusaSlicer"
+        ".config/chatgpt"
         {
           directory = ".ssh";
           mode = "0700";
