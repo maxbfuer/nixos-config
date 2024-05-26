@@ -10,12 +10,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    impermanence.url = "github:nix-community/impermanence";
+
     dwl-flake = {
       url = "path:/home/max/repos/dwl";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    impermanence.url = "github:nix-community/impermanence";
   };
 
   outputs = {
@@ -23,8 +23,8 @@
     nixpkgs,
     stable-nixpkgs,
     home-manager,
-    dwl-flake,
     impermanence,
+    dwl-flake,
     ...
   } @ inputs: let
     system = "x86_64-linux";
