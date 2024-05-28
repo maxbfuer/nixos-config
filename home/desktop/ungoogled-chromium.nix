@@ -6,6 +6,15 @@
 
   # auto-updated list of chromium commandLineArgs:
   # https://peter.sh/experiments/chromium-command-line-switches/
+  home.persistence."/nix/persist/home/max" = {
+    directories = [
+      {
+        directory = ".config/chromium";
+        method = "symlink";
+      }
+    ];
+  };
+
   programs.chromium = {
     enable = true;
     package = pkgs.ungoogled-chromium;

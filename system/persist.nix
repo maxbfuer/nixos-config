@@ -28,7 +28,6 @@
         "workspace"
         "repos"
         "cad"
-        ".config/chromium"
         ".config/FreeTube"
         ".config/obsidian"
         ".config/btop"
