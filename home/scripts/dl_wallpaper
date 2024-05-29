@@ -1,0 +1,29 @@
+#!/usr/bin/env dash
+
+cleanup() {
+    rm -rf "$temp_dir"
+}
+trap cleanup EXIT HUP INT QUIT TERM
+
+if [ "$#" -eq 0 ]; then
+    wallpaper_url="$(wl-paste)"
+    echo "Using clipboard: '$wallpaper_url'"
+elif [ "$#" -eq 1 ]; then
+    wallpaper_url="$1"
+else
+    echo "Usage: $(basename "$0") <wallpaper_url>" >&2
+    exit 1
+fi
+
+temp_dir="$(mktemp -d)"
+cd "$temp_dir" || exit
+
+# download the image
+original_path="$(gallery-dl "$wallpaper_url")"
+image_name="$(basename "$original_path")"
+# downscale to 1440p as high quality jpeg
+# TODO: use a nix config option or something to insert the wallpapers path into this/swaybg stuff
+ffmpeg -y -i "$original_path" \
+    -vf 'scale=2560:1440:flags=lanczos' \
+    -q:v 2 \
+    "/home/max/.local/share/wallpapers/$image_name.jpg"

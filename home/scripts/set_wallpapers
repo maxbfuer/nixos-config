@@ -1,0 +1,12 @@
+#!/usr/bin/env dash
+
+# get two unique random wallpapers and pass them to swaybg
+# (hardcoded for my two monitors)
+
+# TODO: use a nix config option or something to insert the wallpapers path into this/swaybg stuff
+wallpapers="$(fd -ejpg . '/home/max/.local/share/wallpapers' | shuf)"
+
+wallpaper_one="$(echo "$wallpapers" | head -n1)"
+wallpaper_two="$(echo "$wallpapers" | tail -n1)"
+
+swaybg -o DP-1 -i "$wallpaper_one" -o DP-2 -i "$wallpaper_two"
