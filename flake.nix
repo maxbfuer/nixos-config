@@ -10,7 +10,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    impermanence.url = "github:nix-community/impermanence";
+    # impermanence.url = "github:nix-community/impermanence";
+    # using the unmerged PR with defaultDirectoryMethod for the impermanence home-manager module
+    impermanence.url = "github:Misterio77/impermanence/65a12c0542b18fa380c18364c6091088ec09f29b";
 
     dwl-flake = {
       url = "path:/home/max/repos/dwl";

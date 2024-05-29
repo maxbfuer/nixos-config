@@ -23,37 +23,9 @@
     ];
     users.max = {
       directories = [
-        "Downloads"
-        "obby"
-        "workspace"
-        "repos"
-        "cad"
-        ".config/FreeTube"
-        ".config/obsidian"
-        ".config/btop"
-        ".config/FreeCAD"
-        ".config/borg"
-        ".config/qBittorrent"
+        # TODO: these were having issues when configured using the HM impermanence module
         ".config/VSCodium"
-        ".config/PrusaSlicer"
-        ".config/chatgpt"
-        {
-          directory = ".ssh";
-          mode = "0700";
-        }
-        {
-          directory = ".gnupg";
-          mode = "0700";
-        }
-
-        # caches
         ".cache"
-        ".cargo"
-      ];
-
-      files = [
-        ".zsh_history"
-        ".zcompdump"
       ];
     };
   };

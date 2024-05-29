@@ -45,7 +45,6 @@
     inputs.dwl-flake.packages.x86_64-linux.dwl
 
     # -- system monitoring --
-    btop # pretty process monitor
     atop # detailed performance monitor
     nvtopPackages.amd # GPU monitor
     pciutils # lspci
@@ -70,7 +69,6 @@
     viddy # modern watch replacement
 
     # -- desktop --
-    freetube # YouTube client
     xclip # clipboard
     qbittorrent # bittorrent client
   ];

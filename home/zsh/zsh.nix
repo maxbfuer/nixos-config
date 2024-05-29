@@ -1,4 +1,12 @@
 {pkgs, ...}: {
+  # FIXME: I'm not sure that .zcompdump is working, I touched it but it's staying empty right now
+  home.persistence."/nix/persist/home/max" = {
+    files = [
+      ".zsh_history"
+      ".zcompdump"
+    ];
+  };
+
   home.packages = with pkgs; [
     zsh-powerlevel10k # prompt
   ];

@@ -24,11 +24,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1716908526,
-        "narHash": "sha256-Zl6e/sEVDh07K47XxDGPsXTYT4nI6llUDbQ4xMIwp7k=",
+        "lastModified": 1716930911,
+        "narHash": "sha256-t4HT5j3Jy7skRB5PINnxcEBCkgE89rGBpwTI7YS4Ffo=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "373ead20606efa9181cd15ba19a5deac7ead1492",
+        "rev": "a9b36cbe9292a649222b89fdb9ae9907e9c74086",
         "type": "github"
       },
       "original": {
@@ -40,16 +40,17 @@
     },
     "impermanence": {
       "locked": {
-        "lastModified": 1708968331,
-        "narHash": "sha256-VUXLaPusCBvwM3zhGbRIJVeYluh2uWuqtj4WirQ1L9Y=",
-        "owner": "nix-community",
+        "lastModified": 1715197846,
+        "narHash": "sha256-Eq9dQqOXvLq2Wh185NTZ0T6JVguz+6bDs6hxfHdp1ZE=",
+        "owner": "Misterio77",
         "repo": "impermanence",
-        "rev": "a33ef102a02ce77d3e39c25197664b7a636f9c30",
+        "rev": "65a12c0542b18fa380c18364c6091088ec09f29b",
         "type": "github"
       },
       "original": {
-        "owner": "nix-community",
+        "owner": "Misterio77",
         "repo": "impermanence",
+        "rev": "65a12c0542b18fa380c18364c6091088ec09f29b",
         "type": "github"
       }
     },

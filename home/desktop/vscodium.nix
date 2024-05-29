@@ -1,4 +1,12 @@
 {pkgs, ...}: {
+  # TODO: currently leaving .config/VSCodium in system/persist.nix
+  # I was having issues getting HM impermanence and User/settings.json to work
+  home.persistence."/nix/persist/home/max" = {
+    directories = [
+      "repos"
+    ];
+  };
+
   home.packages = with pkgs; [
     nixd # nix LSP
     alejandra # nix formatter

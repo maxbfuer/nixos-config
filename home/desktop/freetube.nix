@@ -1,16 +1,12 @@
-{
-  inputs,
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   home.persistence."/nix/persist/home/max" = {
     directories = [
-      ".config/chatgpt"
+      ".config/FreeTube"
     ];
   };
 
+  # TODO: declare settings via programs.freetube.settings
   home.packages = with pkgs; [
-    chatgpt-cli
+    freetube
   ];
 }

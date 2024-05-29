@@ -1,16 +1,12 @@
-{
-  inputs,
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   home.persistence."/nix/persist/home/max" = {
     directories = [
-      ".config/chatgpt"
+      "obby"
+      ".config/obsidian"
     ];
   };
 
   home.packages = with pkgs; [
-    chatgpt-cli
+    obsidian
   ];
 }
