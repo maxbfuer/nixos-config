@@ -20,6 +20,7 @@
       "/etc/nixos" # probably temporary
       # caches
       "/var/cache"
+      "/root/.cache"
     ];
     users.max = {
       directories = [
