@@ -1,8 +1,6 @@
 {
-  config,
   pkgs,
   options,
-  lib,
   inputs,
   ...
 }: {
@@ -42,7 +40,7 @@
   environment.systemPackages = with pkgs; [
     git # required for nix flakes
     moonlight-qt
-    inputs.dwl-flake.packages.x86_64-linux.dwl
+    inputs.dwl-flake.packages.${system}.dwl
 
     # -- system monitoring --
     atop # detailed performance monitor

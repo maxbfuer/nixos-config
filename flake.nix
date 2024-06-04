@@ -34,7 +34,7 @@
     nixosConfigurations = {
       gaia = nixpkgs.lib.nixosSystem {
         # pass inputs as args to all submodules
-        specialArgs = {inherit inputs;};
+        specialArgs = {inherit inputs system;};
         modules = [
           # system-wide config
           ./system
@@ -43,7 +43,7 @@
           home-manager.nixosModules.home-manager
           {
             home-manager = {
-              extraSpecialArgs = {inherit inputs;};
+              extraSpecialArgs = {inherit inputs system;};
               useUserPackages = true;
               useGlobalPkgs = true;
               users.max = import ./home;
