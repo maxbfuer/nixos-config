@@ -21,12 +21,9 @@
   };
 
   outputs = {
-    self,
     nixpkgs,
-    stable-nixpkgs,
     home-manager,
     impermanence,
-    dwl-flake,
     ...
   } @ inputs: let
     system = "x86_64-linux";
