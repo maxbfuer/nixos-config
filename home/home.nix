@@ -25,6 +25,7 @@
 
   home.packages = with pkgs; [
     tokei # project code counter
+    unzip
 
     wl-clipboard # clipboard
     gammastep # adjust color temperature
