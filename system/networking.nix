@@ -2,6 +2,7 @@
   environment.persistence."/nix/persist" = {
     directories = [
       "/var/lib/iwd"
+      "/etc/wireguard"
     ];
   };
 
@@ -9,4 +10,8 @@
     hostName = "gaia";
     wireless.iwd.enable = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    wireguard-tools
+  ];
 }
