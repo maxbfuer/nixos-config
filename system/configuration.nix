@@ -13,7 +13,7 @@
   };
 
   users.mutableUsers = false;
-  users.users.root.initialPassword = "$y$j9T$quE96HPGIEjVX/9inly2L/$zo4v0sHkuqN.YvP7ERrM28AUvAm6BzQ.MGMHUATTC2B";
+  users.users.root.initialHashedPassword = "$y$j9T$quE96HPGIEjVX/9inly2L/$zo4v0sHkuqN.YvP7ERrM28AUvAm6BzQ.MGMHUATTC2B";
 
   time.timeZone = "America/Los_Angeles";
   i18n.defaultLocale = "en_US.UTF-8";
