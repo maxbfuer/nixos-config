@@ -15,9 +15,6 @@
   users.mutableUsers = false;
   users.users.root.initialPassword = "$y$j9T$quE96HPGIEjVX/9inly2L/$zo4v0sHkuqN.YvP7ERrM28AUvAm6BzQ.MGMHUATTC2B";
 
-  networking.hostName = "gaia";
-  networking.wireless.iwd.enable = true;
-
   time.timeZone = "America/Los_Angeles";
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -33,7 +30,7 @@
     isNormalUser = true;
     initialHashedPassword = "$y$j9T$epaQgPhOyuk95n9x2kJ0m/$8/K9H67v7kyIPI0qW88XKsFUB5nhfOyUN1Snm4VrrsD";
     description = "Max";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["wheel"];
   };
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -107,11 +104,6 @@
     localuser = null; # plocate will only run as root, setting this to null silences a warning
     interval = "hourly";
     prunePaths = options.services.locate.prunePaths.default ++ ["/mnt/storage"];
-  };
-
-  services.mullvad-vpn = {
-    enable = true;
-    package = pkgs.mullvad-vpn; # include CLI and GUI
   };
 
   boot.tmp.useTmpfs = true;

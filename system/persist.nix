@@ -8,7 +8,6 @@
       "/etc/machine-id"
     ];
     directories = [
-      "/var/lib/iwd"
       "/var/lib/libvirt"
       "/var/lib/qemu"
       "/var/lib/systemd"
