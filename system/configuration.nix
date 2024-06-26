@@ -108,5 +108,11 @@
 
   services.fstrim.enable = true;
 
+  services.minidlna = {
+    enable = true;
+    settings.media_dir = ["/mnt/storage/mediaserver/data/media/tv"];
+  };
+  networking.firewall.enable = false;
+
   system.stateVersion = "23.11";
 }
