@@ -15,7 +15,7 @@
     impermanence.url = "github:Misterio77/impermanence/65a12c0542b18fa380c18364c6091088ec09f29b";
 
     dwl-flake = {
-      url = "path:/home/max/repos/dwl";
+      url = "github:maxbfuer/dwl";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
