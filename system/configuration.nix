@@ -18,7 +18,7 @@
   time.timeZone = "America/Los_Angeles";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
   services.displayManager.enable = false;
   # services.xserver.xkb = {
   #   layout = "us";
