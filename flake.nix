@@ -36,8 +36,8 @@
         # pass inputs as args to all submodules
         specialArgs = {inherit inputs system;};
         modules = [
-          # system-wide config
-          ./system
+          ./nixosModules
+          ./hosts/gaia/configuration.nix
 
           # home config
           home-manager.nixosModules.home-manager

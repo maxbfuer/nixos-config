@@ -4,6 +4,25 @@
   inputs,
   ...
 }: {
+  imports = [
+    ./hardware-configuration.nix
+  ];
+
+  audio.enable = true;
+  bluetooth.enable = true;
+  borg.enable = true;
+  doas.enable = true;
+  docker.enable = true;
+  networking.enable = true;
+  nix-gc.enable = true;
+  nvim.enable = true;
+  persist.enable = true;
+  sshd.enable = true;
+  unfree.enable = true;
+  vfio.enable = true;
+
+  hardware.opengl.enable = true;
+
   boot.loader = {
     systemd-boot = {
       enable = true;
@@ -17,8 +36,6 @@
 
   time.timeZone = "America/Los_Angeles";
   i18n.defaultLocale = "en_US.UTF-8";
-
-  hardware.graphics.enable = true;
   services.displayManager.enable = false;
   # services.xserver.xkb = {
   #   layout = "us";
