@@ -21,7 +21,7 @@
   unfree.enable = true;
   vfio.enable = true;
 
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 
   boot.loader = {
     systemd-boot = {
@@ -127,7 +127,7 @@
 
   services.minidlna = {
     enable = true;
-    settings.media_dir = ["/mnt/storage/mediaserver/data/media/tv"];
+    settings.media_dir = ["/mnt/storage/mediaserver/data"];
   };
   networking.firewall.enable = false;
 
