@@ -21,7 +21,7 @@
   unfree.enable = true;
   vfio.enable = true;
 
-  hardware.graphics.enable = true;
+  hardware.opengl.enable = true;
 
   boot.loader = {
     systemd-boot = {

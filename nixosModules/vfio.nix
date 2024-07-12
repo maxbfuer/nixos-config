@@ -1,5 +1,4 @@
 {
-  inputs,
   pkgs,
   lib,
   config,
@@ -24,7 +23,7 @@
 
     environment.systemPackages = with pkgs; [
       virt-manager # libvirt GUI
-      inputs.stable-nixpkgs.legacyPackages.${system}.looking-glass-client
+      looking-glass-client
     ];
     virtualisation.libvirtd = {
       enable = true;
