@@ -1,6 +1,6 @@
 #!/usr/bin/env dash
 
-target_vm='win11'
+target_vm='win11_ltsc'
 
 notify-send "Shutting down ${target_vm}."
 pkill looking-glass

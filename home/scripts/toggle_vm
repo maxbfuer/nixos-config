@@ -1,9 +1,9 @@
 #!/usr/bin/env dash
 
-target_vm='win11'
+target_vm='win11_ltsc'
 
 # extract the state of the VM from virsh
-state="$(virsh -c 'qemu:///system' list --all | rg 'win11\s*(\S.*)' -or'$1')"
+state="$(virsh -c 'qemu:///system' list --all | rg "${target_vm}\s*(\S.*)" -or'$1')"
 case "${state}" in
 
 # if the VM is shut off, start VM and open looking glass
