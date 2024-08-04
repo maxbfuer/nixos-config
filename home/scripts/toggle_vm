@@ -2,6 +2,8 @@
 
 target_vm='win11_ltsc'
 
+# fix shm permission issue (systemd-tmpfiles was not working)
+
 # extract the state of the VM from virsh
 state="$(virsh -c 'qemu:///system' list --all | rg "${target_vm}\s*(\S.*)" -or'$1')"
 case "${state}" in
@@ -10,12 +12,14 @@ case "${state}" in
 'shut off') {
 	notify-send "Starting ${target_vm}."
 	virsh -c 'qemu:///system' start "${target_vm}"
+	doas sh -c 'chown max:kvm /dev/shm/looking-glass; chmod 660 /dev/shm/looking-glass'
 	looking-glass-client
 } ;;
 
 # if the VM is suspended, resume VM and open looking glass
 'paused') {
 	notify-send "Resuming ${target_vm}."
+	doas sh -c 'chown max:kvm /dev/shm/looking-glass; chmod 660 /dev/shm/looking-glass'
 	looking-glass-client &
 	virsh -c 'qemu:///system' resume "${target_vm}"
 } ;;
@@ -29,6 +33,7 @@ case "${state}" in
 		pkill looking-glass
 		virsh -c 'qemu:///system' suspend "${target_vm}"
 	else
+		doas sh -c 'chown max:kvm /dev/shm/looking-glass; chmod 660 /dev/shm/looking-glass'
 		looking-glass-client
 	fi
 } ;;

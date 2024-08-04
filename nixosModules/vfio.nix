@@ -32,8 +32,6 @@
         swtpm.enable = true; # windows wants a TPM
       };
     };
-    # allow the user access to the shared memory file used by looking-glass
-    systemd.tmpfiles.rules = ["f /dev/shm/looking-glass 0660 max kvm -"];
     users.users.max.extraGroups = ["libvirtd"];
   };
 }
