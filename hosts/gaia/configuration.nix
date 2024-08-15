@@ -14,6 +14,7 @@
   doas.enable = true;
   docker.enable = true;
   networking.enable = true;
+  nom.enable = true;
   nix-gc.enable = true;
   nvim.enable = true;
   persist.enable = true;
