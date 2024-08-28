@@ -37,4 +37,6 @@
   programs.home-manager.enable = true;
 
   home.stateVersion = "23.11";
+
+  aria2.enable = true;
 }

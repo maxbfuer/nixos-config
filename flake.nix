@@ -40,20 +40,13 @@
         modules = [
           ./nixosModules
           ./hosts/gaia/configuration.nix
+          ./home-manager.nix
 
-          # home config
           home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              extraSpecialArgs = {inherit inputs system pkgs-unstable;};
-              useUserPackages = true;
-              useGlobalPkgs = true;
-              users.max = import ./home;
-            };
-          }
           impermanence.nixosModules.impermanence
         ];
       };
     };
+    homeManagerModules.default = ./homeManagerModules;
   };
 }
