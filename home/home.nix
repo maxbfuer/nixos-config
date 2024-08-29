@@ -39,4 +39,5 @@
   home.stateVersion = "23.11";
 
   aria2.enable = true;
+  bat.enable = true;
 }
