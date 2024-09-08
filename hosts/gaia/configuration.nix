@@ -21,6 +21,7 @@
   sshd.enable = true;
   unfree.enable = true;
   vfio.enable = true;
+  kde.enable = true;
 
   hardware.opengl.enable = true;
 
@@ -37,7 +38,6 @@
 
   time.timeZone = "America/Los_Angeles";
   i18n.defaultLocale = "en_US.UTF-8";
-  services.displayManager.enable = false;
   # services.xserver.xkb = {
   #   layout = "us";
   #   options = "caps:escape";
