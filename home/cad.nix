@@ -1,8 +1,4 @@
-{
-  pkgs,
-  pkgs-unstable,
-  ...
-}: {
+{pkgs, ...}: {
   home.persistence."/nix/persist/home/max" = {
     directories = [
       "cad"
@@ -11,11 +7,8 @@
     ];
   };
 
-  home.packages =
-    (with pkgs; [
-      freecad # parametric CAD software
-    ])
-    ++ (with pkgs-unstable; [
-      prusa-slicer # 3d printing slicer
-    ]);
+  home.packages = with pkgs; [
+    freecad # parametric CAD software
+    prusa-slicer # 3d printing slice
+  ];
 }
