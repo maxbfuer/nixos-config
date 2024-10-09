@@ -50,4 +50,5 @@
   prismlauncher.enable = true;
   obsidian.enable = true;
   freetube.enable = true;
+  foot.enable = true;
 }
