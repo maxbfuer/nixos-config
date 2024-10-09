@@ -41,4 +41,5 @@
   aria2.enable = true;
   bat.enable = true;
   yt-dlp.enable = true;
+  git.enable = true;
 }
