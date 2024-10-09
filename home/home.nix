@@ -48,4 +48,5 @@
   mpv.enable = true;
   hue.enable = true;
   prismlauncher.enable = true;
+  obsidian.enable = true;
 }
