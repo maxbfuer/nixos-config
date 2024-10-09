@@ -46,4 +46,5 @@
   btop.enable = true;
   cad.enable = true;
   mpv.enable = true;
+  hue.enable = true;
 }
