@@ -44,4 +44,5 @@
   git.enable = true;
   vscodium.enable = true;
   btop.enable = true;
+  cad.enable = true;
 }
