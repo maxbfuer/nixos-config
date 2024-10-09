@@ -106,6 +106,29 @@
           ];
         };
       };
+      nix = {
+        nixmod = {
+          prefix = ["nixmod"];
+          description = "Template for a nixos or home-manager toggleable config module";
+          body = [
+            ''
+              {
+                lib,
+                config,
+                ...
+              }: {
+                options = {
+                  $1.enable = lib.mkEnableOption "$2";
+                };
+
+                config = lib.mkIf config.$1.enable {
+                  $3
+                };
+              }
+            ''
+          ];
+        };
+      };
     };
   };
 }
