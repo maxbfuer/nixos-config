@@ -42,4 +42,5 @@
   bat.enable = true;
   yt-dlp.enable = true;
   git.enable = true;
+  vscodium.enable = true;
 }
