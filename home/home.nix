@@ -43,4 +43,5 @@
   yt-dlp.enable = true;
   git.enable = true;
   vscodium.enable = true;
+  btop.enable = true;
 }
