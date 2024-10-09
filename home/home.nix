@@ -49,4 +49,5 @@
   hue.enable = true;
   prismlauncher.enable = true;
   obsidian.enable = true;
+  freetube.enable = true;
 }
