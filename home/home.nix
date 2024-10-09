@@ -47,4 +47,5 @@
   cad.enable = true;
   mpv.enable = true;
   hue.enable = true;
+  prismlauncher.enable = true;
 }
