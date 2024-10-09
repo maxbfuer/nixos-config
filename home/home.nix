@@ -51,4 +51,5 @@
   obsidian.enable = true;
   freetube.enable = true;
   foot.enable = true;
+  ungoogled-chromium.enable = true;
 }
