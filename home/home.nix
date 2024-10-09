@@ -45,4 +45,5 @@
   vscodium.enable = true;
   btop.enable = true;
   cad.enable = true;
+  mpv.enable = true;
 }
