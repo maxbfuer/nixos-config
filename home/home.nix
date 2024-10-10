@@ -52,4 +52,5 @@
   freetube.enable = true;
   foot.enable = true;
   ungoogled-chromium.enable = true;
+  firefox.enable = true;
 }
