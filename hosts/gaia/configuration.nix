@@ -22,6 +22,7 @@
   unfree.enable = true;
   vfio.enable = true;
   kde.enable = true;
+  unity.enable = true;
 
   hardware.opengl.enable = true;
 

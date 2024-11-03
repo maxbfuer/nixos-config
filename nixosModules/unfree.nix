@@ -13,6 +13,7 @@
       builtins.elem (lib.getName pkg) [
         "obsidian"
         "zsh-abbr"
+        "unityhub"
       ];
   };
 }
