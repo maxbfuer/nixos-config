@@ -125,14 +125,15 @@
                 {
                   lib,
                   config,
+                  $1
                   ...
                 }: {
                   options = {
-                    $1.enable = lib.mkEnableOption "$2";
+                    $2.enable = lib.mkEnableOption "$3";
                   };
 
-                  config = lib.mkIf config.$1.enable {
-                    $3
+                  config = lib.mkIf config.$2.enable {
+                    $4
                   };
                 }
               ''
