@@ -23,6 +23,7 @@
   vfio.enable = true;
   kde.enable = true;
   unity.enable = true;
+  android.enable = true;
 
   hardware.opengl.enable = true;
 
