@@ -1,0 +1,9 @@
+--alias get-audio,-X '-x --remux-video=mka'
+--embed-chapters
+--embed-info-json
+--embed-metadata
+--embed-subs
+--embed-thumbnail
+--remux-video mkv
+--sub-langs all
+--xattrs

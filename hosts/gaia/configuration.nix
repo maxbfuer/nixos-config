@@ -25,6 +25,7 @@
   unity.enable = true;
   android.enable = true;
   mpv.enable = true;
+  yt-dlp.enable = true;
 
   hardware.opengl.enable = true;
 
