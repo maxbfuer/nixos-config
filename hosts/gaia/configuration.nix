@@ -24,6 +24,7 @@
   kde.enable = true;
   unity.enable = true;
   android.enable = true;
+  mpv.enable = true;
 
   hardware.opengl.enable = true;
 

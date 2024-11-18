@@ -45,7 +45,6 @@
   vscodium.enable = true;
   btop.enable = true;
   cad.enable = true;
-  mpv.enable = true;
   hue.enable = true;
   prismlauncher.enable = true;
   obsidian.enable = true;
