@@ -72,6 +72,7 @@
     extrace # monitor and print exec calls
     duf # prettier `du`
     ncdu # nice interactive disk usage analyzer
+    nmap
 
     # -- CLI/scripting --
     dash # very fast narrowly POSIX-compliant shell
