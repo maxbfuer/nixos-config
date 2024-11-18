@@ -15,7 +15,7 @@
     ];
 
     system.userActivationScripts.createYtDlpConf = ''
-      install -Dm 0644 ${./config} ~/.config/yt-dlp/config
+      install -Dm 444 ${./config} ~/.config/yt-dlp/config
     '';
   };
 }
