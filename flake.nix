@@ -38,7 +38,7 @@
         # pass inputs as args to all submodules
         specialArgs = {inherit inputs system pkgs-unstable;};
         modules = [
-          ./nixosModules
+          ./nixosModules/importer.nix
           ./hosts/gaia/configuration.nix
           ./home-manager.nix
 
@@ -47,6 +47,5 @@
         ];
       };
     };
-    homeManagerModules.default = ./homeManagerModules;
   };
 }

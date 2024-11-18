@@ -12,8 +12,8 @@
 
     users.max = {
       imports = [
-        ./home
-        inputs.self.outputs.homeManagerModules.default
+        ./home/importer.nix
+        ./homeManagerModules/importer.nix
       ];
     };
   };
