@@ -9,5 +9,4 @@
 
   vscodium.enable = true;
   ungoogled-chromium.enable = true;
-  tealdeer.enable = true;
 }

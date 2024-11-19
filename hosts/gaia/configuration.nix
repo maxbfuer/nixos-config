@@ -36,6 +36,7 @@
   cad.enable = true;
   prismlauncher.enable = true;
   obsidian.enable = true;
+  tealdeer.enable = true;
 
   hardware.opengl.enable = true;
 
