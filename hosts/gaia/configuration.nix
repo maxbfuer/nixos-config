@@ -31,6 +31,7 @@
   btop.enable = true;
   foot.enable = true;
   bat.enable = true;
+  freetube.enable = true;
 
   hardware.opengl.enable = true;
 
