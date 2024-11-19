@@ -34,6 +34,7 @@
   freetube.enable = true;
   git.enable = true;
   cad.enable = true;
+  prismlauncher.enable = true;
 
   hardware.opengl.enable = true;
 
