@@ -38,7 +38,6 @@
 
   home.stateVersion = "23.11";
 
-  git.enable = true;
   vscodium.enable = true;
   cad.enable = true;
   prismlauncher.enable = true;

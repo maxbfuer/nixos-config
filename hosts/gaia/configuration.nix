@@ -32,6 +32,7 @@
   foot.enable = true;
   bat.enable = true;
   freetube.enable = true;
+  git.enable = true;
 
   hardware.opengl.enable = true;
 
