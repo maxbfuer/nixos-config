@@ -12,19 +12,13 @@
     environment.persistence."/nix/persist" = {
       directories = [
         "/var/lib/flatpak"
-        {
-          directory = "/home/max/.cache/flatpak";
-          user = "max";
-          group = "users";
-          mode = "755";
-        }
-        {
-          directory = "/home/max/.local/share/flatpak";
-          user = "max";
-          group = "users";
-          mode = "755";
-        }
       ];
+      users.max = {
+        directories = [
+          ".cache/flatpak"
+          ".local/share/flatpak"
+        ];
+      };
     };
 
     services.flatpak.enable = true;

@@ -14,26 +14,13 @@
     flatpak.enable = true;
 
     environment.persistence."/nix/persist" = {
-      directories = [
-        {
-          directory = "/home/max/Unity";
-          user = "max";
-          group = "users";
-          mode = "755";
-        }
-        {
-          directory = "/home/max/UnityProjects";
-          user = "max";
-          group = "users";
-          mode = "755";
-        }
-        {
-          directory = "/home/max/.var/app/com.unity.UnityHub";
-          user = "max";
-          group = "users";
-          mode = "755";
-        }
-      ];
+      users.max = {
+        directories = [
+          "Unity"
+          "UnityProjects"
+          ".var/app/com.unity.UnityHub"
+        ];
+      };
     };
   };
 }
