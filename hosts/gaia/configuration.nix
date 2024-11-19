@@ -37,6 +37,7 @@
   prismlauncher.enable = true;
   obsidian.enable = true;
   tealdeer.enable = true;
+  librewolf.enable = true;
 
   hardware.opengl.enable = true;
 
