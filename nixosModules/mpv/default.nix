@@ -9,6 +9,14 @@
   };
 
   config = lib.mkIf config.mpv.enable {
+    environment.persistence."/nix/persist" = {
+      users.max = {
+        directories = [
+          ".cache/mpv"
+        ];
+      };
+    };
+
     environment.systemPackages = [pkgs.mpv];
 
     system.userActivationScripts.createMpvConf = ''
