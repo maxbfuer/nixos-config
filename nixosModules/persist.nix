@@ -13,6 +13,7 @@
     # TODO: virt-manager defaulting to qemu connection/socket to find my VMs
     # win11.qcow has been coped to /var/lib/libvirt/images and win11.xml has been updated but not tested
     environment.persistence."/nix/persist" = {
+      # TODO: sort into respective modules
       files = [
         "/etc/machine-id"
       ];
@@ -35,6 +36,12 @@
           # TODO: these were having issues when configured using the HM impermanence module
           ".config/VSCodium"
           ".cache"
+          # TODO: coped from home-manager config, move to respective modules
+          "Downloads"
+          "workspace"
+          ".cargo"
+          ".ssh"
+          ".gnupg"
         ];
       };
     };

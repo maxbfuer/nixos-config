@@ -99,6 +99,14 @@
     # -- desktop --
     xclip # clipboard
     qbittorrent # bittorrent client
+
+    # TODO: sort, from home-manager
+    tokei # project code counter
+    unzip
+    wl-clipboard # clipboard
+    gammastep # adjust color temperature
+    blueman # bluetooth device manager GUI
+    pavucontrol # audio control GUI
   ];
   fonts = {
     packages = with pkgs; [
