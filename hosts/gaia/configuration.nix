@@ -30,6 +30,7 @@
   aria2.enable = true;
   btop.enable = true;
   foot.enable = true;
+  bat.enable = true;
 
   hardware.opengl.enable = true;
 

@@ -9,11 +9,9 @@
   };
 
   config = lib.mkIf config.bat.enable {
-    home.packages = with pkgs; [
-      bat
-    ];
+    environment.systemPackages = [pkgs.bat];
 
-    home.sessionVariables = {
+    environment.sessionVariables = {
       MANROFFOPT = "-c";
       MANPAGER = "sh -c 'col -bx | bat -l man -p'";
     };
