@@ -39,7 +39,6 @@
   home.stateVersion = "23.11";
 
   vscodium.enable = true;
-  cad.enable = true;
   prismlauncher.enable = true;
   obsidian.enable = true;
   ungoogled-chromium.enable = true;

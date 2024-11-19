@@ -33,6 +33,7 @@
   bat.enable = true;
   freetube.enable = true;
   git.enable = true;
+  cad.enable = true;
 
   hardware.opengl.enable = true;
 
