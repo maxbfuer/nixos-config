@@ -29,6 +29,7 @@
   hue.enable = true;
   aria2.enable = true;
   btop.enable = true;
+  foot.enable = true;
 
   hardware.opengl.enable = true;
 
