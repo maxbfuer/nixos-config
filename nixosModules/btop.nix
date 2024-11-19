@@ -17,6 +17,8 @@
       };
     };
 
-    environment.systemPackages = [pkgs.btop];
+    environment.systemPackages = with pkgs; [
+      btop
+    ];
   };
 }

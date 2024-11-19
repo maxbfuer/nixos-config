@@ -17,7 +17,9 @@
       };
     };
 
-    environment.systemPackages = [pkgs.mpv];
+    environment.systemPackages = with pkgs; [
+      mpv
+    ];
 
     system.userActivationScripts.createMpvConf = ''
       install -Dm 444 ${./mpv.conf} ~/.config/mpv/mpv.conf

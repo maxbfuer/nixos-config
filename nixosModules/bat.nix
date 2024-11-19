@@ -9,7 +9,9 @@
   };
 
   config = lib.mkIf config.bat.enable {
-    environment.systemPackages = [pkgs.bat];
+    environment.systemPackages = with pkgs; [
+      bat
+    ];
 
     environment.sessionVariables = {
       MANROFFOPT = "-c";

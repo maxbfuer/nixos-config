@@ -9,7 +9,9 @@
   };
 
   config = lib.mkIf config.aria2.enable {
-    environment.systemPackages = [pkgs.aria2];
+    environment.systemPackages = with pkgs; [
+      aria2
+    ];
 
     system.userActivationScripts.createAria2Conf = ''
       install -Dm 444 ${./aria2.conf} ~/.config/aria2/aria2.conf

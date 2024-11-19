@@ -17,6 +17,8 @@
       };
     };
 
-    environment.systemPackages = [pkgs.freetube];
+    environment.systemPackages = with pkgs; [
+      freetube
+    ];
   };
 }

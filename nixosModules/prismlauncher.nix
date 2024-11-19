@@ -17,6 +17,8 @@
       };
     };
 
-    environment.systemPackages = [pkgs.prismlauncher];
+    environment.systemPackages = with pkgs; [
+      prismlauncher
+    ];
   };
 }

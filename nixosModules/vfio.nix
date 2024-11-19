@@ -22,7 +22,7 @@
     };
 
     environment.systemPackages = with pkgs; [
-      virt-manager # libvirt GUI
+      virt-manager
       looking-glass-client
     ];
     virtualisation.libvirtd = {

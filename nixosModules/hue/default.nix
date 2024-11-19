@@ -9,7 +9,9 @@
   };
 
   config = lib.mkIf config.hue.enable {
-    environment.systemPackages = [pkgs.hueadm];
+    environment.systemPackages = with pkgs; [
+      hueadm
+    ];
 
     system.userActivationScripts.createHueadmConf = ''
       install -Dm 444 ${./hueadm.json} ~/.hueadm.json
