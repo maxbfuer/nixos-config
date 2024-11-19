@@ -27,6 +27,7 @@
   mpv.enable = true;
   yt-dlp.enable = true;
   hue.enable = true;
+  aria2.enable = true;
 
   hardware.opengl.enable = true;
 
