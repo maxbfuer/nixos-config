@@ -35,6 +35,7 @@
   git.enable = true;
   cad.enable = true;
   prismlauncher.enable = true;
+  obsidian.enable = true;
 
   hardware.opengl.enable = true;
 
