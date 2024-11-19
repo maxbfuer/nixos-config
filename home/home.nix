@@ -41,7 +41,6 @@
   bat.enable = true;
   git.enable = true;
   vscodium.enable = true;
-  btop.enable = true;
   cad.enable = true;
   prismlauncher.enable = true;
   obsidian.enable = true;

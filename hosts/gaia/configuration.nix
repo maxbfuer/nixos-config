@@ -28,6 +28,7 @@
   yt-dlp.enable = true;
   hue.enable = true;
   aria2.enable = true;
+  btop.enable = true;
 
   hardware.opengl.enable = true;
 
