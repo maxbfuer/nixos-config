@@ -107,7 +107,6 @@
     unzip
     wl-clipboard # clipboard
     gammastep # adjust color temperature
-    blueman # bluetooth device manager GUI
     pavucontrol # audio control GUI
   ];
   fonts = {
