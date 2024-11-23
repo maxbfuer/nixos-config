@@ -38,6 +38,7 @@
   obsidian.enable = true;
   tealdeer.enable = true;
   librewolf.enable = true;
+  cli-tools.enable = true;
 
   hardware.opengl.enable = true;
 
@@ -73,38 +74,10 @@
     moonlight-qt
     inputs.dwl-flake.packages.${system}.dwl
 
-    # -- system monitoring --
-    atop # detailed performance monitor
-    nvtopPackages.amd # GPU monitor
-    pciutils # lspci
-    usbutils # lsusb
-    dmidecode # reads hardware information from the BIOS
-    strace # system call tracer
-    ltrace # library call tracer
-    lsof # list open files
-    lm_sensors # read hardware sensors
-    extrace # monitor and print exec calls
-    duf # prettier `du`
-    ncdu # nice interactive disk usage analyzer
-    nmap
-
-    # -- CLI/scripting --
-    dash # very fast narrowly POSIX-compliant shell
-    fd # modern find alternative
-    ripgrep # improved grep
-    eza # modern ls alternative
-    fzf # fuzzy finder
-    hyperfine # benchmarking tool
-    jq # JSON processor
-    viddy # modern watch replacement
-
     # -- desktop --
     xclip # clipboard
     qbittorrent # bittorrent client
-
     # TODO: sort, from home-manager
-    tokei # project code counter
-    unzip
     wl-clipboard # clipboard
     gammastep # adjust color temperature
     pavucontrol # audio control GUI
