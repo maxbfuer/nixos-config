@@ -22,7 +22,7 @@
       extrace # monitor and print exec calls
       duf # prettier `du`
       ncdu # nice interactive disk usage analyzer
-      nmap
+      nmap # port scanner / network mapper
       dash # very fast narrowly POSIX-compliant shell
       fd # modern find alternative
       ripgrep # improved grep
@@ -32,7 +32,8 @@
       jq # JSON processor
       viddy # modern watch replacement
       tokei # project code counter
-      unzip
+      unzip # unzip zip archives
+      whois # query WHOIS database
     ];
   };
 }
