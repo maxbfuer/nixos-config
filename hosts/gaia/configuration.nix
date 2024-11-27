@@ -40,6 +40,7 @@
   librewolf.enable = true;
   thunderbird.enable = true;
   cli-tools.enable = true;
+  ydotool.enable = true;
 
   hardware.opengl.enable = true;
 
