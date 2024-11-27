@@ -41,6 +41,7 @@
   thunderbird.enable = true;
   cli-tools.enable = true;
   ydotool.enable = true;
+  runelite.enable = true;
 
   hardware.opengl.enable = true;
 
