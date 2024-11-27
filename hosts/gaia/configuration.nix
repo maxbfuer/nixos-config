@@ -38,6 +38,7 @@
   obsidian.enable = true;
   tealdeer.enable = true;
   librewolf.enable = true;
+  thunderbird.enable = true;
   cli-tools.enable = true;
 
   hardware.opengl.enable = true;
