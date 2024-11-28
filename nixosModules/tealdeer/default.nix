@@ -9,6 +9,14 @@
   };
 
   config = lib.mkIf config.tealdeer.enable {
+    environment.persistence."/nix/persist" = {
+      users.max = {
+        directories = [
+          ".cache/tealdeer"
+        ];
+      };
+    };
+
     environment.systemPackages = with pkgs; [
       tealdeer
     ];
