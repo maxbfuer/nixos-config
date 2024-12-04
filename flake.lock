@@ -1,25 +1,5 @@
 {
   "nodes": {
-    "dwl-flake": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1721860572,
-        "narHash": "sha256-Kz+m52D4gQKerC5vapI9KB6BEvEEZv5m8I/3tkoIviQ=",
-        "owner": "maxbfuer",
-        "repo": "dwl",
-        "rev": "e9a500b5442a00cd0bde59d91af580ea5fa8f881",
-        "type": "github"
-      },
-      "original": {
-        "owner": "maxbfuer",
-        "repo": "dwl",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -91,7 +71,6 @@
     },
     "root": {
       "inputs": {
-        "dwl-flake": "dwl-flake",
         "home-manager": "home-manager",
         "impermanence": "impermanence",
         "nixpkgs": "nixpkgs",

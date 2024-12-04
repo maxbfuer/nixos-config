@@ -76,7 +76,6 @@
   environment.systemPackages = with pkgs; [
     git # required for nix flakes
     moonlight-qt
-    inputs.dwl-flake.packages.${system}.dwl
 
     # -- desktop --
     xclip # clipboard

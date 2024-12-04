@@ -14,10 +14,10 @@
     # using the unmerged PR with defaultDirectoryMethod for the impermanence home-manager module
     impermanence.url = "github:Misterio77/impermanence/65a12c0542b18fa380c18364c6091088ec09f29b";
 
-    dwl-flake = {
-      url = "github:maxbfuer/dwl";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # dwl-flake = {
+    #   url = "github:maxbfuer/dwl";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs = {
