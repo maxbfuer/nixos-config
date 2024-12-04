@@ -42,6 +42,7 @@
   cli-tools.enable = true;
   ydotool.enable = true;
   runelite.enable = true;
+  printing.enable = true;
 
   hardware.opengl.enable = true;
 
