@@ -12,6 +12,7 @@
     # so I am using the flatpak version of Unity Hub.
     # Install with `flatpak install com.unity.UnityHub`
     flatpak.enable = true;
+    vscode.enable = true;
 
     environment.persistence."/nix/persist" = {
       users.max = {
