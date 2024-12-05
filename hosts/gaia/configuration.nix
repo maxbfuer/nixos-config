@@ -79,7 +79,6 @@
 
     # -- desktop --
     xclip # clipboard
-    qbittorrent # bittorrent client
     # TODO: sort, from home-manager
     wl-clipboard # clipboard
     gammastep # adjust color temperature
