@@ -31,7 +31,10 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+    pkgs-unstable = import nixpkgs-unstable {
+      inherit system;
+      config.allowUnfree = true;
+    };
   in {
     # define the formatter used by `nix fmt`
     formatter.${system} = nixpkgs.legacyPackages.${system}.alejandra;

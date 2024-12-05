@@ -1,7 +1,7 @@
 {
   lib,
   config,
-  pkgs,
+  pkgs-unstable,
   system,
   nix-vscode-extensions,
   ...
@@ -14,7 +14,7 @@ in {
 
   config = lib.mkIf config.vscode.enable {
     environment.systemPackages = [
-      (pkgs.vscode-with-extensions.override {
+      (pkgs-unstable.vscode-with-extensions.override {
         vscodeExtensions = with vscode-marketplace; [
           ms-dotnettools.csdevkit # proprietary microsoft C# extension
           visualstudiotoolsforunity.vstuc # unity integration
