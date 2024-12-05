@@ -35,6 +35,7 @@
       unzip # unzip zip archives
       whois # query WHOIS database
       gping # ping with a graph
+      sshfs
     ];
   };
 }
