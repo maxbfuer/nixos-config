@@ -8,6 +8,8 @@
     ./hardware-configuration.nix
   ];
 
+  nixpkgs.config.allowUnfree = true;
+
   audio.enable = true;
   bluetooth.enable = true;
   borg.enable = true;
@@ -19,7 +21,6 @@
   nvim.enable = true;
   persist.enable = true;
   sshd.enable = true;
-  unfree.enable = true;
   vfio.enable = true;
   kde.enable = true;
   unity.enable = true;
