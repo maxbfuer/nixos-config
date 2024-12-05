@@ -14,8 +14,6 @@
     # using the unmerged PR with defaultDirectoryMethod for the impermanence home-manager module
     impermanence.url = "github:Misterio77/impermanence/65a12c0542b18fa380c18364c6091088ec09f29b";
 
-    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-
     # dwl-flake = {
     #   url = "github:maxbfuer/dwl";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -27,7 +25,6 @@
     nixpkgs-unstable,
     home-manager,
     impermanence,
-    nix-vscode-extensions,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -42,7 +39,7 @@
     nixosConfigurations = {
       gaia = nixpkgs.lib.nixosSystem {
         # pass inputs as args to all submodules
-        specialArgs = {inherit inputs system pkgs-unstable nix-vscode-extensions;};
+        specialArgs = {inherit inputs system pkgs-unstable;};
         modules = [
           ./nixosModules/importer.nix
           ./hosts/gaia/configuration.nix
