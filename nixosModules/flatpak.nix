@@ -17,6 +17,7 @@
         directories = [
           ".cache/flatpak"
           ".local/share/flatpak"
+          ".var"
         ];
       };
     };

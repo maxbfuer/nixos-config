@@ -10,7 +10,11 @@
   config = lib.mkIf config.unity.enable {
     # I could not get native nix unityhub to successfully launch the editor,
     # so I am using the flatpak version of Unity Hub.
-    # Install with `flatpak install com.unity.UnityHub`
+    # VSCode was also misbehaving, so I will just try the flatpak setup.
+    # Install these packages with `flatpak install ...`:
+    # com.unity.UnityHub
+    # com.visualstudio.code
+
     flatpak.enable = true;
 
     environment.persistence."/nix/persist" = {
@@ -18,7 +22,6 @@
         directories = [
           "Unity"
           "UnityProjects"
-          ".var/app/com.unity.UnityHub"
         ];
       };
     };
